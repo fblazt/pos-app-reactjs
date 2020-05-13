@@ -1,15 +1,12 @@
 import React from 'react';
+import SideNav from './components/SideNav.js';
 import './assets/css/tailwind.generated.css';
 
 function App() {
   return (
     <>
       <div className='max-h-screen overflow-y-hidden flex flex-row w-full'>
-        <nav className='pt-24 px-5 w-auto min-h-screen bg-white fixed flex flex-col items-center border-r shadow-md'>
-          <i class='fas fa-utensils fa-2x mb-12'></i>
-          <i class='fas fa-clipboard fa-2x mb-12'></i>
-          <i class='fas fa-plus fa-2x mb-12 text-green-600'></i>
-        </nav>
+        <SideNav/>
         <div className='w-9/12'>
           <div className='p-5 fixed w-9/12 flex flex-row items-center bg-white z-index-0 border-b-2 shadow-md'>
             <i class='fas fa-bars fa-2x'></i>
