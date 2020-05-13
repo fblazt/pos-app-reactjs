@@ -1,6 +1,6 @@
 import React from 'react';
-import SideNav from './components/SideNav.js';
-import Menu from './components/Menu.js';
+import SideNav from './components/SideNav';
+import Menu from './components/Menu';
 import './assets/css/tailwind.generated.css';
 
 function App() {
