@@ -1,31 +1,17 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 export default class MenuItem extends Component {
-  state = {
-    post: []
-  };
-
-  componentDidMount() {
-    axios.get(`https://jsonplaceholder.typicode.com/photos/1`)
-      .then(res => {
-        const post = res.data;
-        this.setState({post});
-        console.log(post)
-      });
-  }
-
   render() {
     return (
-      <div className="w-64">
-        <div className='w-56 h-40 rounded-t-lg overflow-hidden bg-cover'>
+      <div className="w-1/3 mb-5">
+        <div className='w-10/12 h-40 rounded-t-lg overflow-hidden bg-cover'>
           <img
-            src={this.state.post.url}
+            src={this.props.url}
             alt='Menu'
           />
         </div>
-        <p className='text-xl font-medium'>{this.state.post.title}</p>
-        <p className='text-xl font-bold'>Rp. 5.000</p>
+        <p className='text-xl font-medium'>{this.props.title}</p>
+        <p className='text-xl font-bold'>Rp. {this.props.price}</p>
       </div>
     )
   }
